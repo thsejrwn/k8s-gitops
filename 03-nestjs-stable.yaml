@@ -20,6 +20,6 @@ spec:
       containers:
       - name: nestjs
         # 현재 운영중인 이미지 태그 그대로 유지
-        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:5fdc33abe2833bfd316251a8aeea9b00d21882a2
+        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:89de9fd0fb9ee66877754c857744fdf00163316e
         ports:
         - containerPort: 3000
