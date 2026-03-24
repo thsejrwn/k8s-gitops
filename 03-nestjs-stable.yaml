@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestjs-stable
+  namespace: test-app
+spec:
+  replicas: 4              # 전체 5개 중 4개 (80%)
+  selector:
+    matchLabels:
+      app: nestjs
+      version: stable
+  template:
+    metadata:
+      labels:
+        app: nestjs
+        version: stable
+    spec:
+      imagePullSecrets:
+      - name: ecr-secret
+      containers:
+      - name: nestjs
+        # 현재 운영중인 이미지 태그 그대로 유지
+        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:8eea2e86daf8d9c3280c2b3cbf583f0e5e941e2f
+        ports:
+        - containerPort: 3000
