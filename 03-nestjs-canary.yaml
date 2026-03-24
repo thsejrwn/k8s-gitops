@@ -20,6 +20,6 @@ spec:
       containers:
       - name: nestjs
         # deploy-canary.yml 이 이 부분을 업데이트
-        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:c23d365831e4ed993c9778a45e39271eaae9e062
+        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:d25e98fb138e57a03743e18bee7e999b818deabd
         ports:
         - containerPort: 3000
