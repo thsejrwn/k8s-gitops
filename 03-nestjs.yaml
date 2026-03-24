@@ -17,7 +17,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: nestjs
-        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:7a33f98b44be8498706b2bc3cb4afa7ef8e3289a
+        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:ed7d8e31a670676d9a5333271f755961aa13cf8b
         ports:
         - containerPort: 3000
 ---
