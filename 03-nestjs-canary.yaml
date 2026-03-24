@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestjs-canary
+  namespace: test-app
+spec:
+  replicas: 1              # 전체 5개 중 1개 (20%)
+  selector:
+    matchLabels:
+      app: nestjs
+      version: canary
+  template:
+    metadata:
+      labels:
+        app: nestjs
+        version: canary
+    spec:
+      imagePullSecrets:
+      - name: ecr-secret
+      containers:
+      - name: nestjs
+        # deploy-canary.yml 이 이 부분을 업데이트
+        image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:8eea2e86daf8d9c3280c2b3cbf583f0e5e941e2f
+        ports:
+        - containerPort: 3000
