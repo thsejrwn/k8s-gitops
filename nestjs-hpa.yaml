@@ -7,7 +7,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: 03-nestjs-stable.yaml
+    name: nestjs-stable
   minReplicas: 1
   maxReplicas: 10
   metrics:
