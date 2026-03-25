@@ -1,13 +1,13 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: brad-order-backend-hpa
-  namespace: bradkim
+  name: nestjs-hpa
+  namespace: test-app
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: brad-order-backend
+    name: 03-nestjs-stable.yaml
   minReplicas: 1
   maxReplicas: 10
   metrics:
