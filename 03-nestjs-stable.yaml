@@ -4,7 +4,7 @@ metadata:
   name: nestjs-stable
   namespace: test-app
 spec:
-  replicas: 2              # 전체 5개 중 4개 (80%)
+  replicas: 1            # 전체 5개 중 4개 (80%)
   selector:
     matchLabels:
       app: nestjs
