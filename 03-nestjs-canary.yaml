@@ -23,3 +23,10 @@ spec:
         image: 923516172483.dkr.ecr.ap-northeast-2.amazonaws.com/nestjs-app:8274b4f033c7d2cfc02ecc7492b5f622fb60e78d
         ports:
         - containerPort: 3000
+        resources:          # ← 추가할 위치
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
