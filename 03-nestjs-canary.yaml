@@ -25,8 +25,8 @@ spec:
         - containerPort: 3000
         resources:          # ← 추가할 위치
           requests:
-            cpu: "100m"
+            cpu: "200m"
             memory: "256Mi"
           limits:
-            cpu: "200m"
+            cpu: "300m"
             memory: "512Mi"
