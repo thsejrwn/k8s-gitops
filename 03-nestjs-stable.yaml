@@ -26,7 +26,7 @@ spec:
         resources:          # ← 추가할 위치
           requests:
             cpu: "50m"
-            memory: "256Mi"
+            memory: "128Mi"
           limits:
             cpu: "300m"
             memory: "512Mi"
